@@ -40,6 +40,8 @@ body {
 h1,
 h2,
 h3 {
+  margin: 0;
+  font-weight: 400;
   font-family: var(--font-title);
   line-height: 1.2em;
 }
@@ -48,10 +50,10 @@ h1 span,
 h2 span,
 h3 span {
   color: var(--color-main);
-  font-weight: 400;
 }
 
 h1 {
+  margin: 0 0 101px;
   font-size: 72px;
 }
 
@@ -157,15 +159,6 @@ header img {
   text-align: center;
 }
 
-.filter {
-  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
-}
-
-.mb-30 {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
 #navigation {
   display: flex;
   flex-direction: row;
@@ -223,12 +216,6 @@ header img {
   padding: 100px 165px;
 }
 
-#ikea-effect span,
-#distortion-of-novelty span {
-  font: 24px/1.2 Neucha, sans-serif;
-  color: var(--color-dark-transparent);
-}
-
 #ikea-effect h4,
 #distortion-of-novelty h4 {
   color: var(--color-white);
@@ -271,21 +258,32 @@ h4 {
   vertical-align: middle;
 }
 
-footer {
-  padding: 100px 165px;
-}
+/* Subscriber */
 
 .subscriber {
-  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 40px 55px;
+
   color: var(--color-white);
+
   background-color: var(--color-main-dark);
 }
 
-.subscriber input {
-  box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  padding: 15px;
+/* Subtitle */
+
+.subtitle {
+  color: var(--color-dark-transparent);
+  font-size: 24px;
+  font-family: var(--font-title);
+  line-height: 1.2;
+}
+
+.background-color-brown .subtitle {
+  color: var(--color-white-transparent);
 }
 
 .send::before {
@@ -310,4 +308,80 @@ footer {
 
 .rules {
   font-size: 12px;
+}
+
+/* Form */
+.form-label {
+  display: block;
+  margin: 0 0 10px;
+
+  font-size: 18px;
+}
+
+.form-control {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.form-input {
+  width: 423px;
+  height: 50px;
+  margin-right: 62px;
+  padding: 15px;
+
+  border: 0;
+}
+
+.form-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 62px;
+  height: 50px;
+
+  background-color: var(--color-main);
+  border: 0;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.form-submit:hover {
+  background-color: #ea7600;
+}
+
+.form-submit::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+
+  background-image: url("../images/send.svg");
+
+  content: "";
+}
+
+.form-privacy {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Atomic */
+
+.filter {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.mb-30 {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
